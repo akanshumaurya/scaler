@@ -3,98 +3,186 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scaler Navbar</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Scaler Navbar</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
 
     <style>
-        body {
-            margin: 0;
+
+        body{
+            margin:0;
             font-family: Arial, Helvetica, sans-serif;
+            background-color:#f8f9fa;
         }
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 40px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            background-color: white;
+        /* HEADER */
+
+        header{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:15px 40px;
+            background-color:white;
+            box-shadow:0 2px 5px rgba(0,0,0,0.1);
+            flex-wrap:wrap;
+            gap:15px;
+            position:sticky;
+            top:0;
+            z-index:1000;
         }
 
-        .nav-menu {
-            display: flex;
-            gap: 25px;
-            font-weight: 600;
-            align-items: center;
+        /* NAVIGATION */
+
+        .nav-menu{
+            display:flex;
+            gap:20px;
+            align-items:center;
+            font-weight:600;
+            flex-wrap:wrap;
         }
 
-        .nav-menu a {
-            text-decoration: none;
-            color: black;
+        .nav-menu a{
+            text-decoration:none;
+            color:black;
+            transition:0.3s;
         }
 
-        .nav-menu a:hover {
-            color: blue;
+        .nav-menu a:hover{
+            color:#0d6efd;
         }
 
-        .button-group {
-            display: flex;
-            gap: 10px;
+        /* BUTTON GROUP */
+
+        .button-group{
+            display:flex;
+            gap:10px;
+            flex-wrap:wrap;
         }
+
+        /* HERO SECTION */
+
+        .hero{
+            min-height:80vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            padding:40px 20px;
+            background:linear-gradient(to right,#0d6efd,#6ea8fe);
+            color:white;
+        }
+
+        .hero h1{
+            font-size:50px;
+            font-weight:bold;
+        }
+
+        .hero p{
+            font-size:18px;
+            margin-top:15px;
+        }
+
+        /* RESPONSIVE DESIGN */
+
+        @media(max-width:768px){
+
+            header{
+                flex-direction:column;
+                text-align:center;
+                padding:15px;
+            }
+
+            .nav-menu{
+                justify-content:center;
+                gap:15px;
+            }
+
+            .button-group{
+                width:100%;
+                justify-content:center;
+            }
+
+            .button-group button{
+                width:100%;
+            }
+
+            .hero h1{
+                font-size:32px;
+            }
+
+            .hero p{
+                font-size:16px;
+            }
+        }
+
     </style>
 </head>
 
 <body>
 
-    <!-- Header -->
+    <!-- HEADER -->
+
     <header>
 
-        <!-- Logo -->
+        <!-- LOGO -->
+
         <img src="scaler-logo.svg"
              alt="Scaler Logo"
-             width="120">
+             width="120"
+             class="img-fluid">
 
-        <!-- Navigation -->
+        <!-- NAVIGATION -->
+
         <nav class="nav-menu">
 
-            <!-- Dropdown -->
+            <!-- DROPDOWN -->
+
             <div class="dropdown">
 
                 <a class="dropdown-toggle text-decoration-none text-dark"
                    href="#"
                    role="button"
                    data-bs-toggle="dropdown">
+
                     PROGRAM
+
                 </a>
 
                 <ul class="dropdown-menu">
+
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item"
+                           href="#">
                             Java FullStack Developer
                         </a>
                     </li>
 
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item"
+                           href="#">
                             Python FullStack Developer
                         </a>
                     </li>
 
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item"
+                           href="#">
                             Data Science
                         </a>
                     </li>
 
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item"
+                           href="#">
                             AI & ML
                         </a>
                     </li>
+
                 </ul>
 
             </div>
@@ -106,28 +194,59 @@
 
         </nav>
 
-        <!-- Buttons -->
+        <!-- BUTTONS -->
+
         <div class="button-group">
 
-            <!-- Login Button -->
-            <button class="btn btn-success"
+            <!-- LOGIN BUTTON -->
+
+            <button class="btn btn-outline-primary"
                     data-bs-toggle="modal"
                     data-bs-target="#registerCandidate">
+
                 Login
+
             </button>
 
-            <!-- Placement Report Button -->
-            <button class="btn btn-primary" 
-            data-bs-toggle="offcanvas"
-            data-bs-target="#placementReports">
-                PLACEMENT REPORTS
+            <!-- PLACEMENT REPORT BUTTON -->
+
+            <button class="btn btn-primary"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#placementReports">
+
+                Placement Reports
+
             </button>
 
         </div>
 
     </header>
 
-    <!-- Modal for Login-->
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <div>
+
+            <h1>
+                Learn Software Development
+            </h1>
+
+            <p>
+                Upskill with Industry Ready Courses,
+                AI Labs, Mentorship & Placement Support
+            </p>
+
+            <button class="btn btn-light btn-lg mt-3">
+                Explore Programs
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- LOGIN MODAL -->
+
     <div class="modal fade"
          id="registerCandidate">
 
@@ -135,7 +254,8 @@
 
             <div class="modal-content">
 
-                <!-- Modal Header -->
+                <!-- HEADER -->
+
                 <div class="modal-header">
 
                     <h4 class="modal-title">
@@ -148,37 +268,44 @@
 
                 </div>
 
-                <!-- Modal Body -->
+                <!-- BODY -->
+
                 <div class="modal-body">
 
                     <dl>
 
                         <dt>Student Name</dt>
+
                         <dd>
                             <input type="text"
                                    class="form-control"
-                                   placeholder="Enter Your Name">
+                                   placeholder="Enter Your Name"
+                                   required>
                         </dd>
 
                         <dt>Student Email</dt>
+
                         <dd>
                             <input type="email"
                                    class="form-control"
-                                   placeholder="Enter Your Email">
+                                   placeholder="Enter Your Email"
+                                   required>
                         </dd>
 
                         <dt>Student Mobile No.</dt>
+
                         <dd>
-                            <input type="number"
+                            <input type="tel"
                                    class="form-control"
-                                   placeholder="Enter Your Mobile Number">
+                                   placeholder="Enter Mobile Number"
+                                   required>
                         </dd>
 
                         <dt>Select Course</dt>
+
                         <dd>
 
-                            <select id="selCourse"
-                                    class="form-select">
+                            <select class="form-select">
 
                                 <option>
                                     Java FullStack Developer
@@ -189,23 +316,11 @@
                                 </option>
 
                                 <option>
-                                    Python Course for Beginners
+                                    Data Science
                                 </option>
 
                                 <option>
-                                    Java Fundamentals
-                                </option>
-
-                                <option>
-                                    DSA Using Java
-                                </option>
-
-                                <option>
-                                    Python and SQL for Data Science
-                                </option>
-
-                                <option>
-                                    JavaScript Course
+                                    AI & ML
                                 </option>
 
                             </select>
@@ -216,17 +331,22 @@
 
                 </div>
 
-                <!-- Modal Footer -->
+                <!-- FOOTER -->
+
                 <div class="modal-footer">
 
                     <button class="btn btn-primary"
                             data-bs-dismiss="modal">
+
                         Submit
+
                     </button>
 
                     <button class="btn btn-danger"
                             data-bs-dismiss="modal">
+
                         Cancel
+
                     </button>
 
                 </div>
@@ -236,96 +356,110 @@
         </div>
 
     </div>
- 
 
+    <!-- OFFCANVAS -->
 
-<!-- Offcanvas -->
-<div class="offcanvas offcanvas-end"
-     tabindex="-1"
-     id="placementReports">
+    <div class="offcanvas offcanvas-end"
+         tabindex="-1"
+         id="placementReports">
 
-    <!-- Header -->
-    <div class="offcanvas-header">
+        <!-- HEADER -->
 
-        <div>
-            <h4 class="fw-bold">
-                View Full Report
-            </h4>
+        <div class="offcanvas-header">
 
-            <p class="text-muted mb-0">
-                Enter your details to view Report
+            <div>
+
+                <h4 class="fw-bold">
+                    View Full Report
+                </h4>
+
+                <p class="text-muted mb-0">
+                    Enter your details to view report
+                </p>
+
+            </div>
+
+            <button class="btn-close"
+                    data-bs-dismiss="offcanvas">
+            </button>
+
+        </div>
+
+        <!-- BODY -->
+
+        <div class="offcanvas-body">
+
+            <div class="mb-3">
+
+                <input type="text"
+                       class="form-control"
+                       placeholder="Enter Your Name">
+
+            </div>
+
+            <div class="mb-3">
+
+                <input type="email"
+                       class="form-control"
+                       placeholder="Enter Your Email">
+
+            </div>
+
+            <div class="mb-3">
+
+                <input type="tel"
+                       class="form-control"
+                       placeholder="Enter Mobile Number">
+
+            </div>
+
+            <!-- FIELDSET -->
+
+            <fieldset class="border rounded p-2 mb-3">
+
+                <legend class="float-none w-auto px-2 fs-6">
+                    Graduation Year
+                </legend>
+
+                <select class="form-select border-0 shadow-none">
+
+                    <option selected disabled>
+                        Select Graduation Year
+                    </option>
+
+                    <option>2020</option>
+                    <option>2021</option>
+                    <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                    <option>2026</option>
+                    <option>2027</option>
+
+                </select>
+
+            </fieldset>
+
+            <button class="btn btn-primary w-100 mb-3">
+
+                Sign Up
+
+            </button>
+
+            <p class="small text-muted">
+
+                By submitting this form,
+                you agree to our Terms &
+                Privacy Policy.
+
             </p>
-        </div>
 
-        <button class="btn-close"
-                data-bs-dismiss="offcanvas">
-        </button>
+        </div>
 
     </div>
-
-    <!-- Body -->
-    <div class="offcanvas-body">
-
-        <div class="mb-3">
-            <input type="text"
-                   class="form-control"
-                   placeholder="Enter Your Name">
-        </div>
-
-        <div class="mb-3">
-            <input type="email"
-                   class="form-control"
-                   placeholder="Enter Your Email">
-        </div>
-
-        <div class="mb-3">
-           <input type="tel"
-       class="form-control"
-       placeholder="Enter Mobile Number">
-        </div>
-
-        <fieldset class="border rounded p-2 mb-3">
-
-    <legend class="float-none w-auto px-2 fs-6">
-        Graduation Year
-    </legend>
-
-    <select class="form-select border-0 shadow-none">
-
-        <option selected disabled>
-            Select Graduation Year
-        </option>
-
-        <option>2020</option>
-        <option>2021</option>
-        <option>2022</option>
-        <option>2023</option>
-        <option>2024</option>
-        <option>2025</option>
-        <option>2026</option>
-        <option>2027</option>
-        <option>2028</option>
-        <option>2029</option>
-
-    </select>
-
-</fieldset>
-
-        <button class="btn btn-primary w-100 mb-3">
-            Sign Up
-        </button>
-
-        <p class="small text-muted">
-            By submitting this form, you agree to our
-            Terms of Service & Privacy Policy.
-        </p>
-
-    </div>
-
-</div>
-
 
     <!-- Bootstrap JS -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
