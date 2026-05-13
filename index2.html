@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Modal for Placement Reports -->
+<div class="modal fade" id="placementReports">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header border-0 pb-0">
+
+                <div>
+                    <h4 class="modal-title fw-bold">
+                        View Full Report
+                    </h4>
+
+                    <p class="text-muted mb-0">
+                        Enter your details to view Report
+                    </p>
+                </div>
+
+                <button class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+
+                <dl>
+
+                    <dd class="mb-3">
+                        <input type="text"
+                               class="form-control form-control-lg"
+                               placeholder="Enter Your Name">
+                    </dd>
+
+                    <dd class="mb-3">
+                        <input type="email"
+                               class="form-control form-control-lg"
+                               placeholder="Enter Your Email">
+                    </dd>
+
+                    <dd class="mb-3">
+                        <input type="number"
+                               class="form-control form-control-lg"
+                               placeholder="Enter Your Mobile Number">
+                    </dd>
+
+                    <dd class="mb-3">
+
+                        <fieldset class="border rounded p-2">
+
+                            <legend class="float-none w-auto px-2 fs-6">
+                                Graduation Year
+                            </legend>
+
+                            <input type="number"
+                                   class="form-control border-0 shadow-none"
+                                   placeholder="Enter Graduation Year">
+
+                        </fieldset>
+
+                    </dd>
+
+                </dl>
+
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer border-0 d-block">
+
+                <button class="btn btn-primary w-100 mb-3"
+                        data-bs-dismiss="modal">
+                    Sign Up
+                </button>
+
+                <p class="small text-muted text-center">
+                    By submitting this form, you agree to our
+                    Terms of Service & Privacy Policy and to be
+                    contacted via Call, Email, WhatsApp, or SMS.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+    <!-- Placement Report Button -->
+<button class="btn btn-primary"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#placementReports">
+    PLACEMENT REPORTS
+</button>
+
+
+<!-- Offcanvas -->
+<div class="offcanvas offcanvas-end"
+     tabindex="-1"
+     id="placementReports">
+
+    <!-- Header -->
+    <div class="offcanvas-header">
+
+        <div>
+            <h4 class="fw-bold">
+                View Full Report
+            </h4>
+
+            <p class="text-muted mb-0">
+                Enter your details to view Report
+            </p>
+        </div>
+
+        <button class="btn-close"
+                data-bs-dismiss="offcanvas">
+        </button>
+
+    </div>
+
+    <!-- Body -->
+    <div class="offcanvas-body">
+
+        <div class="mb-3">
+            <input type="text"
+                   class="form-control"
+                   placeholder="Enter Your Name">
+        </div>
+
+        <div class="mb-3">
+            <input type="email"
+                   class="form-control"
+                   placeholder="Enter Your Email">
+        </div>
+
+        <div class="mb-3">
+           <input type="tel"
+       class="form-control"
+       placeholder="Enter Mobile Number">
+        </div>
+
+        <fieldset class="border rounded p-2 mb-3">
+
+    <legend class="float-none w-auto px-2 fs-6">
+        Graduation Year
+    </legend>
+
+    <select class="form-select border-0 shadow-none">
+
+        <option selected disabled>
+            Select Graduation Year
+        </option>
+
+        <option>2020</option>
+        <option>2021</option>
+        <option>2022</option>
+        <option>2023</option>
+        <option>2024</option>
+        <option>2025</option>
+        <option>2026</option>
+        <option>2027</option>
+        <option>2028</option>
+        <option>2029</option>
+
+    </select>
+
+</fieldset>
+
+        <button class="btn btn-primary w-100 mb-3">
+            Sign Up
+        </button>
+
+        <p class="small text-muted">
+            By submitting this form, you agree to our
+            Terms of Service & Privacy Policy.
+        </p>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
