@@ -10,13 +10,17 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <style>
 
         body{
             margin:0;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family:Arial, Helvetica, sans-serif;
             background-color:#f8f9fa;
         }
 
@@ -56,7 +60,7 @@
             color:#0d6efd;
         }
 
-        /* BUTTON GROUP */
+        /* BUTTONS */
 
         .button-group{
             display:flex;
@@ -87,7 +91,57 @@
             margin-top:15px;
         }
 
-        /* RESPONSIVE DESIGN */
+        /* FOOTER */
+
+        footer{
+            background-color:#ffffff;
+            padding:40px 20px;
+        }
+
+        .footer-container{
+            display:grid;
+            grid-template-columns:3fr 3fr 2fr 2fr 2fr;
+            gap:30px;
+        }
+
+        .footer-container h4{
+            margin-bottom:15px;
+            font-weight:bold;
+        }
+
+        .footer-container p{
+            margin-bottom:10px;
+            color:#555;
+            font-size:14px;
+            cursor:pointer;
+        }
+
+        .footer-container p:hover{
+            color:#0d6efd;
+        }
+
+        /* SOCIAL ICONS */
+
+        .social-icons{
+            display:flex;
+            flex-direction:column;
+            gap:15px;
+        }
+
+        .social-icons span{
+            display:flex;
+            align-items:center;
+            gap:10px;
+            cursor:pointer;
+            transition:0.3s;
+            font-size:15px;
+        }
+
+        .social-icons span:hover{
+            transform:translateX(5px);
+        }
+
+        /* RESPONSIVE */
 
         @media(max-width:768px){
 
@@ -118,9 +172,19 @@
             .hero p{
                 font-size:16px;
             }
+
+            .footer-container{
+                grid-template-columns:1fr;
+                text-align:center;
+            }
+
+            .social-icons span{
+                justify-content:center;
+            }
         }
 
     </style>
+
 </head>
 
 <body>
@@ -140,8 +204,6 @@
 
         <nav class="nav-menu">
 
-            <!-- DROPDOWN -->
-
             <div class="dropdown">
 
                 <a class="dropdown-toggle text-decoration-none text-dark"
@@ -156,29 +218,25 @@
                 <ul class="dropdown-menu">
 
                     <li>
-                        <a class="dropdown-item"
-                           href="#">
+                        <a class="dropdown-item" href="#">
                             Java FullStack Developer
                         </a>
                     </li>
 
                     <li>
-                        <a class="dropdown-item"
-                           href="#">
+                        <a class="dropdown-item" href="#">
                             Python FullStack Developer
                         </a>
                     </li>
 
                     <li>
-                        <a class="dropdown-item"
-                           href="#">
+                        <a class="dropdown-item" href="#">
                             Data Science
                         </a>
                     </li>
 
                     <li>
-                        <a class="dropdown-item"
-                           href="#">
+                        <a class="dropdown-item" href="#">
                             AI & ML
                         </a>
                     </li>
@@ -198,8 +256,6 @@
 
         <div class="button-group">
 
-            <!-- LOGIN BUTTON -->
-
             <button class="btn btn-outline-primary"
                     data-bs-toggle="modal"
                     data-bs-target="#registerCandidate">
@@ -207,8 +263,6 @@
                 Login
 
             </button>
-
-            <!-- PLACEMENT REPORT BUTTON -->
 
             <button class="btn btn-primary"
                     data-bs-toggle="offcanvas"
@@ -254,8 +308,6 @@
 
             <div class="modal-content">
 
-                <!-- HEADER -->
-
                 <div class="modal-header">
 
                     <h4 class="modal-title">
@@ -268,8 +320,6 @@
 
                 </div>
 
-                <!-- BODY -->
-
                 <div class="modal-body">
 
                     <dl>
@@ -279,8 +329,7 @@
                         <dd>
                             <input type="text"
                                    class="form-control"
-                                   placeholder="Enter Your Name"
-                                   required>
+                                   placeholder="Enter Your Name">
                         </dd>
 
                         <dt>Student Email</dt>
@@ -288,8 +337,7 @@
                         <dd>
                             <input type="email"
                                    class="form-control"
-                                   placeholder="Enter Your Email"
-                                   required>
+                                   placeholder="Enter Your Email">
                         </dd>
 
                         <dt>Student Mobile No.</dt>
@@ -297,8 +345,7 @@
                         <dd>
                             <input type="tel"
                                    class="form-control"
-                                   placeholder="Enter Mobile Number"
-                                   required>
+                                   placeholder="Enter Mobile Number">
                         </dd>
 
                         <dt>Select Course</dt>
@@ -307,21 +354,10 @@
 
                             <select class="form-select">
 
-                                <option>
-                                    Java FullStack Developer
-                                </option>
-
-                                <option>
-                                    Python FullStack Developer
-                                </option>
-
-                                <option>
-                                    Data Science
-                                </option>
-
-                                <option>
-                                    AI & ML
-                                </option>
+                                <option>Java FullStack Developer</option>
+                                <option>Python FullStack Developer</option>
+                                <option>Data Science</option>
+                                <option>AI & ML</option>
 
                             </select>
 
@@ -330,8 +366,6 @@
                     </dl>
 
                 </div>
-
-                <!-- FOOTER -->
 
                 <div class="modal-footer">
 
@@ -363,8 +397,6 @@
          tabindex="-1"
          id="placementReports">
 
-        <!-- HEADER -->
-
         <div class="offcanvas-header">
 
             <div>
@@ -384,8 +416,6 @@
             </button>
 
         </div>
-
-        <!-- BODY -->
 
         <div class="offcanvas-body">
 
@@ -413,8 +443,6 @@
 
             </div>
 
-            <!-- FIELDSET -->
-
             <fieldset class="border rounded p-2 mb-3">
 
                 <legend class="float-none w-auto px-2 fs-6">
@@ -441,22 +469,144 @@
             </fieldset>
 
             <button class="btn btn-primary w-100 mb-3">
-
                 Sign Up
-
             </button>
 
             <p class="small text-muted">
-
                 By submitting this form,
                 you agree to our Terms &
                 Privacy Policy.
-
             </p>
 
         </div>
 
     </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <!-- COLUMN 1 -->
+
+            <div>
+
+                <img src="scaler-logo.svg"
+                     alt="Scaler Logo"
+                     width="120"
+                     class="img-fluid mb-3">
+
+                <p>
+                    Interviewbit Software Services Private Limited
+                </p>
+
+                <p>
+                    5th Floor, Surya Park II 14,
+                    3rd Cross, Parappana Agrahar
+                </p>
+
+                <p>
+                    Electronic City Rd,
+                    Electronics City Phase 1
+                </p>
+
+                <p>
+                    Bengaluru, Karnataka 560100
+                </p>
+
+            </div>
+
+            <!-- COLUMN 2 -->
+
+            <div>
+
+                <h4>Explore Scaler</h4>
+
+                <p>Modern Software and AI Engineering</p>
+                <p>Modern Data Science and ML</p>
+                <p>DevOps, Cloud & AI Platform Engineering</p>
+                <p>Advanced AI & Machine Learning</p>
+                <p>AI Engineering Certification</p>
+                <p>Online PGP in Business and AI</p>
+                <p>Masters in AI & ML</p>
+                <p>Masters in Software Development</p>
+
+            </div>
+
+            <!-- COLUMN 3 -->
+
+            <div>
+
+                <h4>Resources</h4>
+
+                <p>Alumni Reviews</p>
+                <p>Blogs</p>
+                <p>Contact Us</p>
+                <p>Careers</p>
+
+            </div>
+
+            <!-- COLUMN 4 -->
+
+            <div>
+
+                <h4>Others</h4>
+
+                <p>About Us</p>
+                <p>Become a Mentor</p>
+                <p>Become a TA</p>
+                <p>Hire From Us</p>
+                <p>Terms of Use</p>
+                <p>Privacy Policy</p>
+
+            </div>
+
+            <!-- COLUMN 5 -->
+
+            <div>
+
+                <h4>Socials</h4>
+
+                <div class="social-icons">
+
+                    <span>
+                        <i class="bi bi-youtube text-danger fs-4"></i>
+                        YouTube
+                    </span>
+
+                    <span>
+                        <i class="bi bi-instagram fs-4"></i>
+                        Instagram
+                    </span>
+
+                    <span>
+                        <i class="bi bi-linkedin text-primary fs-4"></i>
+                        LinkedIn
+                    </span>
+
+                    <span>
+                        <i class="bi bi-facebook text-primary fs-4"></i>
+                        Facebook
+                    </span>
+
+                    <span>
+                        <i class="bi bi-twitter-x fs-4"></i>
+                        Twitter
+                    </span>
+
+                    <span>
+                        <i class="bi bi-quora text-danger fs-4"></i>
+                        Quora
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
 
     <!-- Bootstrap JS -->
 
