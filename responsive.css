@@ -1,0 +1,148 @@
+/* =========================
+   TABLET (992px)
+========================= */
+
+@media (max-width:992px){
+
+    header{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .nav-menu{
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .button-group{
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+        flex-wrap: wrap;
+    }
+
+    .image-section{
+        display: none;
+    }
+
+    .form-section{
+        width: 100%;
+        padding: 35px 25px;
+    }
+
+    .form-container{
+        max-width: 100%;
+    }
+
+    .footer-container{
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+}
+
+/* =========================
+   MOBILE (768px)
+========================= */
+
+@media (max-width:768px){
+
+    .main-heading{
+        font-size: 45px;
+        line-height: 1.3;
+    }
+
+    .description{
+        font-size: 18px;
+    }
+
+    .button-group{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button-group button{
+        width: 100%;
+    }
+
+    .form-section{
+        padding: 25px 18px;
+    }
+
+    .form-heading{
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .form-control,
+    .form-select{
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .btn-primary{
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .form-note{
+        font-size: 12px;
+    }
+
+    .footer-container{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .social-icons span{
+        justify-content: center;
+    }
+
+    .bottom-help-bar{
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+
+    .bottom-help-bar span{
+        flex-direction: column;
+        gap: 3px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE (480px)
+========================= */
+
+@media (max-width:480px){
+
+    .main-heading{
+        font-size: 34px;
+    }
+
+    .description{
+        font-size: 16px;
+    }
+
+    .form-section{
+        padding: 20px 15px;
+    }
+
+    .form-heading{
+        font-size: 24px;
+    }
+
+    .small-heading{
+        font-size: 12px;
+    }
+
+    header{
+        padding: 12px;
+    }
+
+    .nav-menu{
+        gap: 10px;
+        font-size: 14px;
+    }
+}

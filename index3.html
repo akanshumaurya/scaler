@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Callback</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <!-- Request Callback Button -->
+
+<button class="btn btn-outline-dark btn-lg px-4"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#callbackOffcanvas">
+
+    Request a Callback
+
+</button>
+
+
+<!-- Bottom Offcanvas -->
+
+<div class="offcanvas offcanvas-bottom h-100"
+     tabindex="-1"
+     id="callbackOffcanvas">
+
+    <div class="offcanvas-header">
+
+        <h4 class="fw-bold">
+            Talk to Our Advisor
+        </h4>
+
+        <button type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas">
+        </button>
+
+    </div>
+
+    <div class="offcanvas-body p-0">
+
+        <section class="callback-page container-fluid">
+
+            <div class="row vh-100">
+
+                <!-- Left Image -->
+
+                <div class="col-lg-6 image-section">
+
+                    <img src="assets/requestcallimage.webp"
+                         alt="callback image"
+                         class="img-fluid full-image">
+
+                </div>
+
+                <!-- Right Form -->
+
+                <div class="col-lg-6 form-section">
+
+                    <div class="form-container mx-auto">
+
+                        <form>
+
+                            <!-- Name -->
+
+                            <div class="mb-3">
+
+                                <input type="text"
+                                       class="form-control form-control-lg"
+                                       placeholder="Enter your Name">
+
+                            </div>
+
+                            <!-- Email -->
+
+                            <div class="mb-3">
+
+                                <input type="email"
+                                       class="form-control form-control-lg"
+                                       placeholder="Enter your Email Address">
+
+                            </div>
+
+                            <!-- Phone -->
+
+                            <fieldset class="border rounded mb-3 px-3">
+
+                                <legend class="float-none w-auto px-2 fs-6">
+                                    Phone Number
+                                </legend>
+
+                                <input type="tel"
+                                       class="form-control border-0 shadow-none"
+                                       placeholder="Enter your Phone Number *">
+
+                            </fieldset>
+
+                            <!-- Job Title -->
+
+                            <fieldset class="border rounded mb-3 px-3">
+
+                                <legend class="float-none w-auto px-2 fs-6">
+                                    Job Title
+                                </legend>
+
+                                <select class="form-select border-0 shadow-none">
+
+                                    <option selected disabled>
+                                        Select job title*
+                                    </option>
+
+                                    <option>
+                                        Engineering Leadership
+                                    </option>
+
+                                    <option>
+                                        Software Development Engineer (Backend)
+                                    </option>
+
+                                    <option>
+                                        Software Development Engineer (Frontend)
+                                    </option>
+
+                                    <option>
+                                        Software Development Engineer (Full Stack)
+                                    </option>
+
+                                    <option>Data Scientist</option>
+
+                                    <option>Research Engineer</option>
+
+                                    <option>Android Engineer</option>
+
+                                    <option>Support Engineer</option>
+
+                                    <option>iOS Engineer</option>
+
+                                    <option>Data Analyst</option>
+
+                                    <option>Other</option>
+
+                                </select>
+
+                            </fieldset>
+
+                            <!-- Program -->
+
+                            <fieldset class="border rounded mb-3 px-3">
+
+                                <legend class="float-none w-auto px-2 fs-6">
+                                    Select Program
+                                </legend>
+
+                                <select class="form-select border-0 shadow-none">
+
+                                    <option selected disabled>
+                                        Select program*
+                                    </option>
+
+                                    <option>
+                                        Modern Software and AI Engineering Program
+                                    </option>
+
+                                    <option>
+                                        Modern Data Science and ML with AI
+                                    </option>
+
+                                    <option>
+                                        DevOps, Cloud & AI Platform Engineering
+                                    </option>
+
+                                    <option>
+                                        Advanced AIML with Agentic AI
+                                    </option>
+
+                                </select>
+
+                            </fieldset>
+
+                            <!-- Company -->
+
+                            <fieldset class="border rounded mb-3 px-3">
+
+                                <legend class="float-none w-auto px-2 fs-6">
+                                    Search Company *
+                                </legend>
+
+                                <select class="form-select border-0 shadow-none">
+
+                                    <option selected disabled>
+                                        Search Company *
+                                    </option>
+
+                                    <option>TCS</option>
+                                    <option>Infosys</option>
+                                    <option>Google</option>
+                                    <option>Microsoft</option>
+
+                                </select>
+
+                            </fieldset>
+
+                            <!-- Graduation -->
+
+                            <fieldset class="border rounded mb-4 px-3">
+
+                                <legend class="float-none w-auto px-2 fs-6">
+                                    Graduation Year *
+                                </legend>
+
+                                <select class="form-select border-0 shadow-none">
+
+                                    <option selected disabled>
+                                        Select Graduation Year *
+                                    </option>
+
+                                    <option>2020</option>
+                                    <option>2021</option>
+                                    <option>2022</option>
+                                    <option>2023</option>
+                                    <option>2024</option>
+                                    <option>2025</option>
+                                    <option>2026</option>
+                                    <option>2027</option>
+
+                                </select>
+
+                            </fieldset>
+
+                            <!-- Submit -->
+
+                            <button class="btn btn-primary btn-lg w-100">
+
+                                Submit
+
+                            </button>
+
+                        </form>
+
+                        <!-- Terms -->
+
+                        <p class="form-note mt-3">
+
+                            By submitting this form, you agree to our
+
+                            <a href="#">
+                                Terms of Service
+                            </a>
+
+                            &
+
+                            <a href="#">
+                                Privacy Policy
+                            </a>
+
+                            and to be contacted by us via
+                            Call/Email/WhatsApp/SMS.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</div>
+
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

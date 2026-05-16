@@ -17,237 +17,9 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <style>
+          <link rel="stylesheet" href="style.css">
+          <link rel="stylesheet" href="responsive.css">
 
-        body{
-            margin:0;
-            font-family:Arial, Helvetica, sans-serif;
-            background-color:#f8f9fa;
-        }
-
-        /* HEADER */
-
-        header{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            padding:15px 40px;
-            background-color:white;
-            box-shadow:0 2px 5px rgba(0,0,0,0.1);
-            flex-wrap:wrap;
-            gap:15px;
-            position:sticky;
-            top:0;
-            z-index:1000;
-        }
-
-        /* NAVIGATION */
-
-        .nav-menu{
-            display:flex;
-            gap:20px;
-            align-items:center;
-            font-weight:600;
-            flex-wrap:wrap;
-        }
-
-        .nav-menu a{
-            text-decoration:none;
-            color:black;
-            transition:0.3s;
-        }
-
-        .nav-menu a:hover{
-            color:#0d6efd;
-        }
-
-        /* BUTTONS */
-
-        .button-group{
-            display:flex;
-            gap:10px;
-            flex-wrap:wrap;
-        }
-
-        /* HERO SECTION */
-
-        .hero{
-            min-height:80vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:40px 20px;
-            background:linear-gradient(to right,#0d6efd,#6ea8fe);
-            color:white;
-        }
-
-        .hero h1{
-            font-size:50px;
-            font-weight:bold;
-        }
-
-        .hero p{
-            font-size:18px;
-            margin-top:15px;
-        }
-
-        /* FOOTER */
-
-        footer{
-            background-color:#ffffff;
-            padding:40px 20px;
-        }
-
-        .footer-container{
-            display:grid;
-            grid-template-columns:3fr 3fr 2fr 2fr 2fr;
-            gap:30px;
-        }
-
-        .footer-container h4,
-        footer h5{
-            color:#0d6efd;
-            margin-bottom:15px;
-            font-weight:bold;
-        }
-
-        .footer-container p{
-            margin-bottom:10px;
-            color:#555;
-            font-size:14px;
-            cursor:pointer;
-        }
-
-        .footer-container p:hover{
-            color:#0d6efd;
-        }
-
-        /* SOCIAL ICONS */
-
-        .social-icons{
-            display:flex;
-            flex-direction:column;
-            gap:15px;
-        }
-
-        .social-icons span{
-            display:flex;
-            align-items:center;
-            gap:10px;
-            cursor:pointer;
-            transition:0.3s;
-            font-size:15px;
-        }
-
-        .social-icons span:hover{
-            transform:translateX(5px);
-        }
-
-        /* BOTTOM FOOTER */
-
-        .bottom-footer{
-            font-size:12px;
-            padding-top:30px;
-        }
-
-        .copyright{
-            text-align:center;
-            margin-top:20px;
-            font-size:12px;
-            color:#666;
-        }
-
-      .bottom-help-bar{
-    position:fixed;
-    bottom:0;
-    left:0;
-    width:100%;
-    background-color:#0b1f4d;
-    padding:14px 20px;
-    text-align:center;
-    z-index:2000;
-    font-size:14px;
-    color:white;
-}
-
-.bottom-help-bar span{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:5px;
-    flex-wrap:wrap;
-}
-
-.bottom-help-bar i{
-    color:white;
-}
-
-.bottom-help-bar a{
-    color:white;
-    text-decoration:underline;
-    font-weight:600;
-}
-
-body{
-    padding-bottom:70px;
-}
-
-
-        /* RESPONSIVE */
-
-        @media(max-width:768px){
-
-            header{
-                flex-direction:column;
-                text-align:center;
-                padding:15px;
-            }
-
-            .nav-menu{
-                justify-content:center;
-                gap:15px;
-            }
-
-            .button-group{
-                width:100%;
-                justify-content:center;
-            }
-
-            .button-group button{
-                width:100%;
-            }
-
-            .hero h1{
-                font-size:32px;
-            }
-
-            .hero p{
-                font-size:16px;
-            }
-
-            .footer-container{
-                grid-template-columns:1fr;
-                text-align:center;
-            }
-
-            .social-icons span{
-                justify-content:center;
-            }
-            .bottom-help-bar{
-        font-size:12px;
-        padding:12px 10px;
-    }
-
-    .bottom-help-bar span{
-        flex-direction:column;
-        gap:3px;
-    }
-        }
-
-    
-
-    </style>
 
 </head>
 
@@ -259,7 +31,7 @@ body{
 
         <!-- LOGO -->
 
-        <img src="./Assets/scaler-logo.svg"
+        <img src="./assets/scaler-logo.svg"
              alt="Scaler Logo"
              width="120"
              class="img-fluid">
@@ -346,26 +118,317 @@ body{
 
     <!-- HERO SECTION -->
 
-    <section class="hero">
+    <main>
+    <section class="hero-section">
+        <div class="container text-center hero-content">
 
-        <div>
-
-            <h1>
-                Learn Software Development
-            </h1>
-
-            <p>
-                Upskill with Industry Ready Courses,
-                AI Labs, Mentorship & Placement Support
+            <p class="small-heading">
+                THE MARKET HAS ALREADY CHANGED
             </p>
 
-            <button class="btn btn-light btn-lg mt-3">
-                Explore Programs
-            </button>
+            <h1 class="main-heading">
+                Become the Professional <br>
+
+                <span class="highlight">Built</span>
+                for the
+                <span class="blue-text">Next</span> <br>
+
+                <span class="blue-text">Decade in AI.</span>
+            </h1>
+
+            <p class="description">
+                The investment that compounds.
+                Strong technical foundations, AI integrated at every stage,
+                and a curriculum that evolves as the market does.
+            </p>
+
+            <div class="buttons d-flex justify-content-center gap-3 flex-wrap">
+
+                <button class="btn btn-primary btn-lg px-4"
+                data-bs-toggle="offcanvas"
+                    data-bs-target="#placementReports">
+                    Placement Reports
+                </button>
+
+                <button class="btn btn-outline-dark btn-lg px-4"
+                data-bs-toggle="offcanvas"
+        data-bs-target="#callbackOffcanvas">
+                    Request a Callback
+                </button>
+
+            </div>
 
         </div>
-
     </section>
+</main>
+
+<!-- Request a CallBack Offcanvas -->
+<div class="offcanvas offcanvas-bottom h-100"
+     tabindex="-1"
+     id="callbackOffcanvas">
+
+    <!-- HEADER -->
+
+    <div class="offcanvas-header">
+
+        <!-- Logo -->
+
+        <img src="./Assets/scaler-logo.svg"
+             alt="Scaler Logo"
+             width="120"
+             class="img-fluid">
+
+        <!-- Close Button -->
+
+        <button type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas">
+        </button>
+
+    </div>
+
+    <!-- BODY -->
+
+    <div class="offcanvas-body p-0">
+
+        <section class="callback-page container-fluid">
+
+            <div class="row h-100">
+
+                <!-- LEFT IMAGE -->
+
+                <div class="col-lg-6 image-section">
+
+                    <img src="assets/requestcallimage.webp"
+                         alt="callback image"
+                         class="img-fluid full-image">
+
+                </div>
+
+                <!-- RIGHT FORM -->
+
+                <div class="col-lg-6 form-section">
+
+                    <div class="form-container mx-auto">
+
+                        <!-- HEADING -->
+
+                        <h2 class="form-heading">
+                            Talk to Our Advisor
+                        </h2>
+
+                        <!-- FORM -->
+
+                        <form>
+
+                            <!-- NAME -->
+
+                            <div class="mb-3">
+
+                                <input type="text"
+                                       class="form-control form-control-lg"
+                                       placeholder="Enter your Name">
+
+                            </div>
+
+                            <!-- EMAIL -->
+
+                            <div class="mb-3">
+
+                                <input type="email"
+                                       class="form-control form-control-lg"
+                                       placeholder="Enter your Email Address">
+
+                            </div>
+
+                            <!-- PHONE -->
+
+                            <fieldset class="border rounded mb-3 px-3">
+
+                                <legend class="float-none w-auto px-2 fs-6">
+                                    Phone Number
+                                </legend>
+
+                                <input type="tel"
+                                       class="form-control border-0 shadow-none"
+                                       placeholder="Enter your Phone Number *">
+
+                            </fieldset>
+
+                            <!-- JOB TITLE -->
+
+                            <fieldset class="border rounded mb-3 px-3">
+
+                                <legend class="float-none w-auto px-2 fs-6">
+                                    Job Title
+                                </legend>
+
+                                <select class="form-select border-0 shadow-none">
+
+                                    <option selected disabled>
+                                        Select job title*
+                                    </option>
+
+                                    <option>
+                                        Engineering Leadership
+                                    </option>
+
+                                    <option>
+                                        Software Development Engineer (Backend)
+                                    </option>
+
+                                    <option>
+                                        Software Development Engineer (Frontend)
+                                    </option>
+
+                                    <option>
+                                        Software Development Engineer (Full Stack)
+                                    </option>
+
+                                    <option>Data Scientist</option>
+
+                                    <option>Research Engineer</option>
+
+                                    <option>Android Engineer</option>
+
+                                    <option>Support Engineer</option>
+
+                                    <option>iOS Engineer</option>
+
+                                    <option>Data Analyst</option>
+
+                                    <option>Other</option>
+
+                                </select>
+
+                            </fieldset>
+
+                            <!-- PROGRAM -->
+
+                            <fieldset class="border rounded mb-3 px-3">
+
+                                <legend class="float-none w-auto px-2 fs-6">
+                                    Select Program
+                                </legend>
+
+                                <select class="form-select border-0 shadow-none">
+
+                                    <option selected disabled>
+                                        Select program*
+                                    </option>
+
+                                    <option>
+                                        Modern Software and AI Engineering Program
+                                    </option>
+
+                                    <option>
+                                        Modern Data Science and ML with AI
+                                    </option>
+
+                                    <option>
+                                        DevOps, Cloud & AI Platform Engineering
+                                    </option>
+
+                                    <option>
+                                        Advanced AIML with Agentic AI
+                                    </option>
+
+                                </select>
+
+                            </fieldset>
+
+                            <!-- COMPANY -->
+
+                            <fieldset class="border rounded mb-3 px-3">
+
+                                <legend class="float-none w-auto px-2 fs-6">
+                                    Search Company *
+                                </legend>
+
+                                <select class="form-select border-0 shadow-none">
+
+                                    <option selected disabled>
+                                        Search Company *
+                                    </option>
+
+                                    <option>TCS</option>
+                                    <option>Infosys</option>
+                                    <option>Google</option>
+                                    <option>Microsoft</option>
+
+                                </select>
+
+                            </fieldset>
+
+                            <!-- GRADUATION -->
+
+                            <fieldset class="border rounded mb-4 px-3">
+
+                                <legend class="float-none w-auto px-2 fs-6">
+                                    Graduation Year *
+                                </legend>
+
+                                <select class="form-select border-0 shadow-none">
+
+                                    <option selected disabled>
+                                        Select Graduation Year *
+                                    </option>
+
+                                    <option>2020</option>
+                                    <option>2021</option>
+                                    <option>2022</option>
+                                    <option>2023</option>
+                                    <option>2024</option>
+                                    <option>2025</option>
+                                    <option>2026</option>
+                                    <option>2027</option>
+
+                                </select>
+
+                            </fieldset>
+
+                            <!-- SUBMIT -->
+
+                            <button class="btn btn-primary btn-lg w-100">
+
+                                Submit
+
+                            </button>
+
+                        </form>
+
+                        <!-- TERMS -->
+
+                        <p class="form-note mt-3">
+
+                            By submitting this form, you agree to our
+
+                            <a href="#">
+                                Terms of Service
+                            </a>
+
+                            &
+
+                            <a href="#">
+                                Privacy Policy
+                            </a>
+
+                            and to be contacted by us via
+                            Call/Email/WhatsApp/SMS.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</div>
 
     <!-- LOGIN MODAL -->
 
@@ -542,17 +605,30 @@ body{
                 Sign Up
             </button>
 
-            <p class="small text-muted">
-                By submitting this form,
-                you agree to our Terms &
-                Privacy Policy.
-            </p>
+             <!-- TERMS -->
+
+                        <p class="form-note mt-3">
+
+                            By submitting this form, you agree to our
+
+                            <a href="#">
+                                Terms of Service
+                            </a>
+
+                            &
+
+                            <a href="#">
+                                Privacy Policy
+                            </a>
+
+                            and to be contacted by us via
+                            Call/Email/WhatsApp/SMS.
+
+                        </p>
 
         </div>
 
     </div>
-
-    <!-- FOOTER -->
 
     <!-- FOOTER -->
 
@@ -564,7 +640,7 @@ body{
 
         <div>
 
-            <img src="./Assets/scaler-logo.svg"
+            <img src="./assets/scaler-logo.svg"
                  alt="Scaler Logo"
                  width="120"
                  class="img-fluid mb-3">
@@ -733,7 +809,7 @@ body{
 
         <div>
 
-            <img src="./Assets/create-impact-tagline.svg"
+            <img src="/assets/create-impact-tagline.svg"
                  class="img-fluid mt-3 mb-3"
                  alt="Tagline Image">
 
@@ -759,13 +835,17 @@ body{
         <i class="bi bi-telephone-fill"></i>
         08045579575
         or
-        <a href="#">Request a call?</a>
+       <a href="#"
+   data-bs-toggle="offcanvas"
+   data-bs-target="#callbackOffcanvas">
+   Request a call?
+</a>
     </span>
 
 </div>
     <!-- Bootstrap JS -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
